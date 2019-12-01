@@ -18,13 +18,22 @@ $stmt->execute([$nickname, $email, $content]);
 <head>
     <title>送信完了</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/thanks.css">
 </head>
 
 <body>
-    <h1>お問い合わせありがとうございました！</h1>
-    <p><?php echo h($nickname); ?></p>
-    <p><?php echo h($email); ?></p>
-    <p><?php echo h($content); ?></p>
+    <div class="container-wrapper">
+        <div class="container-wrap">
+            <div class="container">
+                <h1>メッセージは無事送信されました。</h1>
+                <h1>お問い合わせありがとうございます！</h1>
+                <!-- <p><?php echo h($nickname); ?></p>
+                <p><?php echo h($email); ?></p>
+                <p><?php echo h($content); ?></p> -->
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

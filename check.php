@@ -12,22 +12,27 @@ $content = $_POST['content'];
 
 
 // 入力内容のチェック
+if ($nickname == '' || $email == '' || $content == '') {
+    $message = '入力内容に不備があります。';
+} else {
+    $message = '入力内容をご確認ください';
+}
 if ($nickname == '') {
     $nickname_result = 'ニックネームが入力されていません。';
 } else {
-    $nickname_result = 'ようこそ、' . $nickname . '様';
+    $nickname_result = $nickname . '様';
 }
 
 if ($email == '') {
     $email_result = 'メールアドレスが入力されていません。';
 } else {
-    $email_result = 'メールアドレス：' . $email;
+    $email_result = $email;
 }
 
 if ($content == '') {
     $content_result =  'お問い合わせ内容が入力されていません。';
 } else {
-    $content_result = 'お問い合わせ内容：' . $content;
+    $content_result = $content;
 }
 require_once('function.php');
 ?>
@@ -35,8 +40,8 @@ require_once('function.php');
 <html lang="ja">
 
 <head>
-    <title>入力内容確認</title>
     <meta charset="utf-8">
+    <title>お問い合わせ</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/check.css">
 </head>
@@ -45,33 +50,43 @@ require_once('function.php');
     <div class="container-wrapper">
         <div class="container-wrap">
             <div class="container">
-                <h1>Confirm</h1>
-                <!-- html上でphpの処理ができる -->
-
-                <!-- htmlspecialchars()で<>や&をただの文字として見なすことができる -->
+                <h1>Confarm</h1>
                 <div class="message">
-                    <p><?php echo h($nickname_result); ?></p>
-                    <p><?php echo h($email_result); ?></p>
-                    <p><?php echo h($content_result); ?></p>
+                    <p><?php echo h($message); ?></p>
                 </div>
-                <!-- formのactionは飛ぶ先のファイル名を記入
-        formのmethodは呼び出すコマンドを記入 -->
+                <main>
+                    <div class="left-box">
+                        <div class="name">
+                            お名前　:　　　　　<p><?php echo h($nickname_result); ?></p>
+                        </div>
+                        <div class="email">
+                            メールアドレス :　　<p><?php echo h($email_result); ?></p>
+
+
+                        </div>
+                    </div>
+                    <div class="right-box">
+                        <div>
+                            メッセージ ▼<p><?php echo h($content_result); ?></p>
+
+
+                        </div>
+                    </div>
+                </main>
+                <!-- submitと書いてあるところにactionのファイルに飛ぶ -->
                 <form method="POST" action="thanks.php">
-                    <!-- index.phpで入力した値はinputタグのみしか引き出せないので、新たにformのなかにinputを追加する -->
-                    <!-- ?php echoを?= だけで書くことができる-->
-                    <!-- type="hidden"にすると、表示されないが、データは保存される -->
                     <input type="hidden" name="nickname" value="<?= h($nickname) ?>">
                     <input type="hidden" name="email" value="<?= h($email) ?>">
                     <input type="hidden" name="content" value="<?= h($content) ?>">
-                    <button type="button" class="btn-square-shadow " onclick="history.back()">Back</button>
+                    <button type="button" class="btn-square-shadow" onclick="history.back()">戻る</button>
                     <?php if ($nickname != '' && $email != '' && $content != '') : ?>
-                        <button type="submit" class="btn-square-shadow ">OK</button>
+                        <button type="submit" class="btn-square-shadow">OK</button>
                     <?php endif; ?>
+
                 </form>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
