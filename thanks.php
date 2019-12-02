@@ -9,7 +9,7 @@ $nickname = $_POST['nickname'];
 $email = $_POST['email'];
 $content = $_POST['content'];
 
-$stmt = $dbh->prepare('INSERT INTO surveys (nickname, email, content) VALUES (?, ?, ?)');
+$stmt = $dbh->prepare('INSERT INTO shota_base (nickname, email, content) VALUES (?, ?, ?)');
 $stmt->execute([$nickname, $email, $content]);
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ $stmt->execute([$nickname, $email, $content]);
     <div class="container-wrapper">
         <div class="container-wrap">
             <div class="container">
-                <h1>メッセージは無事送信されました。</h1>
+                <h1>無事送信されました。</h1>
                 <h1>お問い合わせありがとうございます！</h1>
                 <!-- <p><?php echo h($nickname); ?></p>
                 <p><?php echo h($email); ?></p>

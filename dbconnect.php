@@ -3,7 +3,7 @@
 //DBに接続
 // MySQLのテンプレ
 $host = "localhost"; //MySQLがインストールされてるコンピュータ
-$dbname = "contact_form"; //使用するDB
+$dbname = "my-contact-form"; //使用するDB
 $charset = "utf8"; //文字コード
 $user = 'root'; //MySQLにログインするユーザー名
 $password = ''; //ユーザーのパスワード
