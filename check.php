@@ -50,7 +50,7 @@ require_once('function.php');
     <div class="container-wrapper">
         <div class="container-wrap">
             <div class="container">
-                <h1>Confarm</h1>
+                <h1>Confirm</h1>
                 <div class="message">
                     <p><?php echo h($message); ?></p>
                 </div>
