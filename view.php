@@ -1,11 +1,11 @@
 <?php
-    require_once('function.php');
-    require_once('dbconnect.php');
+    // require_once('function.php');
+    // require_once('dbconnect.php');
 
-    //SQLを実行
-    $stmt = $dbh->prepare('SELECT * FROM contact_form');
-    $stmt->execute();
-    $results = $stmt->fetchAll();
+    // //SQLを実行
+    // $stmt = $dbh->prepare('SELECT * FROM contact_form');
+    // $stmt->execute();
+    // $results = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="ja">

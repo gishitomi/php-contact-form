@@ -8,11 +8,11 @@
 // $user = getenv('USERNAME'); //MySQLにログインするユーザー名
 // $password = getenv('PASSWORD'); //ユーザーのパスワード
 
-$host = getenv("us-cdbr-iron-east-05.cleardb.net"); //MySQLがインストールされてるコンピュータ
-$dbname = getenv("heroku_3654984a1f3de2b"); //使用するDB
+$host = "us-cdbr-iron-east-05.cleardb.net"; //MySQLがインストールされてるコンピュータ
+$dbname = "heroku_3654984a1f3de2b"; //使用するDB
 $charset = "utf8"; //文字コード
-$user = getenv('bbda35e6df46d8'); //MySQLにログインするユーザー名
-$password = getenv('fd7cb580'); //ユーザーのパスワード
+$user = 'bbda35e6df46d8'; //MySQLにログインするユーザー名
+$password = 'fd7cb580'; //ユーザーのパスワード
 
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //SQLでエラーが表示された場合、画面にエラーが出力される

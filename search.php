@@ -1,16 +1,16 @@
 <?php
-    require_once('function.php');
-    require_once('dbconnect.php');
+    // require_once('function.php');
+    // require_once('dbconnect.php');
 
-    $nickname = '';
-    if (isset($_GET['nickname'])) {
-        $nickname = $_GET['nickname'];
-    }
+    // $nickname = '';
+    // if (isset($_GET['nickname'])) {
+    //     $nickname = $_GET['nickname'];
+    // }
 
-    //SQLを実行
-    $stmt = $dbh->prepare('SELECT * FROM contact_form WHERE nickname like ?');
-    $stmt->execute(["%$nickname%"]);
-    $results = $stmt->fetchAll();
+    // //SQLを実行
+    // $stmt = $dbh->prepare('SELECT * FROM contact_form WHERE nickname like ?');
+    // $stmt->execute(["%$nickname%"]);
+    // $results = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
