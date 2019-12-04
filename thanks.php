@@ -9,7 +9,7 @@ $nickname = $_POST['nickname'];
 $email = $_POST['email'];
 $content = $_POST['content'];
 
-$stmt = $dbh->prepare('INSERT INTO shota_base (nickname, email, content) VALUES (?, ?, ?)');
+$stmt = $dbh->prepare('INSERT INTO contact_form (nickname, email, content) VALUES (?, ?, ?)');
 $stmt->execute([$nickname, $email, $content]);
 ?>
 <!DOCTYPE html>
@@ -20,6 +20,7 @@ $stmt->execute([$nickname, $email, $content]);
     <meta charset="utf-8">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/thanks.css">
+
 </head>
 
 <body>
