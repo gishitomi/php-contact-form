@@ -1,0 +1,10 @@
+mysql://bea0726dc15ddd:932b2616@us-cdbr-iron-east-05.cleardb.net/heroku_c8f17a568040fbe?reconnect=true
+
+USERNAME : bea0726dc15ddd
+
+PASSWORD : 932b2616
+
+HOSTNAME : us-cdbr-iron-east-05.cleardb.net
+
+DBNAME : heroku_c8f17a568040fbe?reconnect=true
+
