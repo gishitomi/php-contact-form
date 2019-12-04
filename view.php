@@ -3,7 +3,7 @@
     require_once('dbconnect.php');
 
     //SQLを実行
-    $stmt = $dbh->prepare('SELECT * FROM shota_base');
+    $stmt = $dbh->prepare('SELECT * FROM contact_form');
     $stmt->execute();
     $results = $stmt->fetchAll();
 ?>
